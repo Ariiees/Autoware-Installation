@@ -71,3 +71,8 @@ After these, you should launch autoware and rviz successfully, and you could see
 cd autoware/
 ./docker/build.sh --devel-only
 ```
+## Other: docker images check
+If you choose to build Autoware using **Option-2**, you could find this image: `ghcr.io/autowarefoundation/autoware` after running:
+```
+docker images
+```
