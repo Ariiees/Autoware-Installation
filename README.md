@@ -1,4 +1,4 @@
-# Autoware Build
+# Autoware Install
 Ubuntu 22.04
 
 ## Prepare
