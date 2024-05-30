@@ -57,7 +57,7 @@ colcon build --symlink-install --cmake-args -DCMAKE_BUILD_TYPE=Release
 colon build will take up to 1 hour, could quiet and terminal all other processes to avoid stuck.
 ## Option-2 (Docker-Build): Development setup
 ```
-./docker/run.sh --devel --map-path $HOME/autoware_map
+./docker/run.sh --devel --map-path ~/autoware_map
 ```
 After these, you should launch autoware and rviz successfully, ignore process die error(no publish data or node, doesn't matter, we will check it lately
 ## Build docker image for devp
