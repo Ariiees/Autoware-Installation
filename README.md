@@ -61,11 +61,11 @@ colon build will take up to 1 hour, could quiet and terminal all other processes
 ```
 The [absolute path] could be checked using the following command:
 ```
-cd ~/autoware_map
+cd ~/autoware_map/sample-map-planning
 pwd
 ```
 
-After these, you should launch autoware and rviz successfully, ignore process die error(no publish data or node, doesn't matter, we will check it lately
+After these, you should launch autoware and rviz successfully, and you could see the same screen as shown in [https://autowarefoundation.github.io/autoware-documentation/main/tutorials/ad-hoc-simulation/planning-simulation/](Planning simulation)
 ## Build docker image for devp
 ```
 cd autoware/
