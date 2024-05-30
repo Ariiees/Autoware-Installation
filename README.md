@@ -1,4 +1,4 @@
-# Autoware Docker (OpenAD-Kit) Build
+# Autoware Build
 Ubuntu 22.04
 
 ## Prepare
@@ -45,7 +45,7 @@ In autoware folder
 cd autoware
 ./setup-dev-env.sh -y --download-artifacts docker
 ```
-## Workspace Setup (NO SUDO!!, in autoware folder)
+## Source-Build: Workspace Setup (NO SUDO!!, in autoware folder)
 ```
 mkdir src
 vcs import src < autoware.repos
@@ -55,7 +55,7 @@ rosdep install -y --from-paths src --ignore-src --rosdistro $ROS_DISTRO
 colcon build --symlink-install --cmake-args -DCMAKE_BUILD_TYPE=Release
 ```
 colon build will take up to 1 hour, could quiet and terminal all other processes to avoid stuck.
-## Development setup
+## Docker-Build: Development setup
 ```
 ./docker/run.sh --devel --map-path ~/autoware_map
 ```
@@ -63,5 +63,5 @@ After these, you should launch autoware and rviz successfully, ignore process di
 ## Build docker image for devp
 ```
 cd autoware/
-./docker/build.sh
+./docker/build.sh --devel-only
 ```
