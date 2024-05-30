@@ -65,8 +65,8 @@ cd ~/autoware_map/sample-map-planning
 pwd
 ```
 
-After these, you should launch autoware and rviz successfully, and you could see the same screen as shown in [https://autowarefoundation.github.io/autoware-documentation/main/tutorials/ad-hoc-simulation/planning-simulation/](Planning simulation)
-## Build docker image for devp
+After these, you should launch autoware and rviz successfully, and you could see the same screen as shown in [Planning simulation](https://autowarefoundation.github.io/autoware-documentation/main/tutorials/ad-hoc-simulation/planning-simulation/)
+## (Optional) Build docker image for devp
 ```
 cd autoware/
 ./docker/build.sh --devel-only
