@@ -45,7 +45,7 @@ In autoware folder
 cd autoware
 ./setup-dev-env.sh -y --download-artifacts docker
 ```
-## Source-Build: Workspace Setup (NO SUDO!!, in autoware folder)
+## Option-1(Source-Build): Workspace Setup (NO SUDO!!, in autoware folder)
 ```
 mkdir src
 vcs import src < autoware.repos
@@ -55,7 +55,7 @@ rosdep install -y --from-paths src --ignore-src --rosdistro $ROS_DISTRO
 colcon build --symlink-install --cmake-args -DCMAKE_BUILD_TYPE=Release
 ```
 colon build will take up to 1 hour, could quiet and terminal all other processes to avoid stuck.
-## Docker-Build: Development setup
+## Option-2 (Docker-Build): Development setup
 ```
 ./docker/run.sh --devel --map-path $HOME/autoware_map
 ```
