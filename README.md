@@ -54,7 +54,7 @@ rosdep update
 rosdep install -y --from-paths src --ignore-src --rosdistro $ROS_DISTRO
 colcon build --symlink-install --cmake-args -DCMAKE_BUILD_TYPE=Release
 ```
-colon build will take up to 1 hour, could quiet and terminal all other processes to avoid stuck.
+colon build will take up to 1 hour, could quit and terminal all other processes to avoid stuck.
 ## Option-2 (Docker-Build): Development setup
 ```
 ./docker/run.sh --devel --map-path [absolute path]
@@ -65,7 +65,7 @@ cd ~/autoware_map/sample-map-planning
 pwd
 ```
 
-After these, you should launch autoware and rviz successfully, and you could see the same screen as shown in [Planning simulation](https://autowarefoundation.github.io/autoware-documentation/main/tutorials/ad-hoc-simulation/planning-simulation/)
+After these, you should launch Autoware and rviz successfully, and you could see the same screen as shown in [Planning simulation](https://autowarefoundation.github.io/autoware-documentation/main/tutorials/ad-hoc-simulation/planning-simulation/)
 ## (Optional) Build docker image for devp
 ```
 cd autoware/
