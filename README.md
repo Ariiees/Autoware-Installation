@@ -43,10 +43,13 @@ free -h
 In autoware folder
 ```
 cd autoware
+./setup-dev-env.sh -y --download-artifacts docker
+```
+## Development setup
+```
 ./docker/run.sh --devel --map-path ~/autoware_map
 ```
 After these, you should launch autoware and rviz successfully, ignore process die error(no publish data or node, doesn't matter, we will check it lately
-
 ## Workspace Setup (NO SUDO!!, in autoware folder)
 ```
 mkdir src
@@ -57,4 +60,8 @@ rosdep install -y --from-paths src --ignore-src --rosdistro $ROS_DISTRO
 colcon build --symlink-install --cmake-args -DCMAKE_BUILD_TYPE=Release
 ```
 colon build will take up to 1 hour, could quiet and terminal all other processes to avoid stuck.
-
+## Build docker image for devp
+```
+cd autoware/
+./docker/build.sh
+```
