@@ -2,7 +2,7 @@
 Ubuntu 22.04
 
 ## Prepare
-make sure there is no old 'autoware', 'autoware_data', 'autoware_folder' folder
+make sure there is no old 'autoware', 'autoware_data', 'autoware_map' folder
 ```
 cd ~
 ```
