@@ -65,12 +65,7 @@ cd autoware
 ```
 #### Pull docker
 ```
-./docker/run.sh --devel --map-path [absolute path]
-```
-The `[absolute path]` could be checked using the following command:
-```
-cd ~/autoware_map/sample-map-planning
-pwd
+./docker/run.sh --devel --map-path ~/autoware_map/sample-map-planning --workspace ~/autoware
 ```
 After these, you should launch Autoware and rviz successfully, and you could see the same screen as shown in [Planning simulation](https://autowarefoundation.github.io/autoware-documentation/main/tutorials/ad-hoc-simulation/planning-simulation/)
 
