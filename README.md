@@ -17,7 +17,7 @@ git clone https://github.com/autowarefoundation/autoware.git
 gdown -O ~/autoware_map/ 'https://docs.google.com/uc?export=download&id=1499_nsbUbIeturZaDj7jhUownh5fvXHd'
 unzip -d ~/autoware_map ~/autoware_map/sample-map-planning.zip
 ```
-### Memory check (In another terminal)
+#### Memory check (In another terminal)
 '''
 free -h
 '''
@@ -67,7 +67,7 @@ cd autoware
 ```
 ./docker/run.sh --devel --map-path [absolute path]
 ```
-The [absolute path] could be checked using the following command:
+The `[absolute path]` could be checked using the following command:
 ```
 cd ~/autoware_map/sample-map-planning
 pwd
