@@ -39,13 +39,14 @@ Check if the change is reflected
 ```
 free -h
 ```
-## Environment Setup (first time)
+## Option-1(Source-Build): Workspace Setup (NO SUDO!!, in autoware folder)
 In autoware folder
+#### Environment Setup (first time)
 ```
 cd autoware
-./setup-dev-env.sh -y --download-artifacts docker
+./setup-dev-env.sh
 ```
-## Option-1(Source-Build): Workspace Setup (NO SUDO!!, in autoware folder)
+#### Build workspace
 ```
 mkdir src
 vcs import src < autoware.repos
@@ -56,6 +57,13 @@ colcon build --symlink-install --cmake-args -DCMAKE_BUILD_TYPE=Release
 ```
 colon build will take up to 1 hour, could quit and terminal all other processes to avoid stuck.
 ## Option-2 (Docker-Build): Development setup
+In autoware folder
+#### Environment Setup (first time)
+```
+cd autoware
+./setup-dev-env.sh -y --download-artifacts docker
+```
+#### Pull docker
 ```
 ./docker/run.sh --devel --map-path [absolute path]
 ```
@@ -64,8 +72,9 @@ The [absolute path] could be checked using the following command:
 cd ~/autoware_map/sample-map-planning
 pwd
 ```
-
 After these, you should launch Autoware and rviz successfully, and you could see the same screen as shown in [Planning simulation](https://autowarefoundation.github.io/autoware-documentation/main/tutorials/ad-hoc-simulation/planning-simulation/)
+
+Local folder 'autoware' will be mounted on '/workspace' by default.
 ## (Optional) Build docker image for devp
 ```
 cd autoware/
