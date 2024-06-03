@@ -18,9 +18,9 @@ gdown -O ~/autoware_map/ 'https://docs.google.com/uc?export=download&id=1499_nsb
 unzip -d ~/autoware_map ~/autoware_map/sample-map-planning.zip
 ```
 #### Memory check (In another terminal)
-'''
+```
 free -h
-'''
+```
 if you do not have 32G memory, do the following:
 
 Remove the current swapfile
