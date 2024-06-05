@@ -71,17 +71,7 @@ cd autoware
 After these, you should launch Autoware and rviz successfully, and you could see the same screen as shown in [Planning simulation](https://autowarefoundation.github.io/autoware-documentation/main/tutorials/ad-hoc-simulation/planning-simulation/)
 
 Local folder 'autoware' will be mounted on '/workspace' by default.
-## (Optional) Build docker image for devp
-```
-cd autoware/
-./docker/build.sh --devel-only
-```
-## Other: docker images check
-If you choose to build Autoware using **Option-2**, you could find this image: `ghcr.io/autowarefoundation/autoware` after running:
-```
-docker images
-```
-## Autoware OpenADKit Docker Install
+## Option-3 (Docker-Build) OpenADKit Install
 **Docker Images: ghcr.io/autowarefoundation/autoware-universe:latest-cuda**
 ```
 git clone https://github.com/autowarefoundation/autoware.git
@@ -115,4 +105,14 @@ sudo apt update
 rosdep update
 rosdep install -y --from-paths src --ignore-src --rosdistro $ROS_DISTRO
 colcon build --symlink-install -cmake-args -DCMAKE_BUILD_TYPE=Release
+```
+## (Optional) Build docker image for devp
+```
+cd autoware/
+./docker/build.sh --devel-only
+```
+## Other: docker images check
+If you choose to build Autoware using **Option-2**, you could find this image: `ghcr.io/autowarefoundation/autoware` after running:
+```
+docker images
 ```
