@@ -39,7 +39,7 @@ Check if the change is reflected
 ```
 free -h
 ```
-## Option-1(Source-Build): Workspace Setup (NO SUDO!!, in autoware folder)
+## Option-1(Source-Build): Workspace Setup
 In autoware folder
 #### Environment Setup (first time)
 ```
@@ -57,6 +57,7 @@ colcon build --symlink-install --cmake-args -DCMAKE_BUILD_TYPE=Release
 ```
 colon build will take up to 1 hour, could quit and terminal all other processes to avoid stuck.
 ## Option-2 (Docker-Build): Development setup
+**Docker Image: ghcr.io/autowarefoundation/autoware:latest-devel-cuda**
 In autoware folder
 #### Environment Setup (first time)
 ```
@@ -79,4 +80,39 @@ cd autoware/
 If you choose to build Autoware using **Option-2**, you could find this image: `ghcr.io/autowarefoundation/autoware` after running:
 ```
 docker images
+```
+## Autoware OpenADKit Docker Install
+**Docker Images: ghcr.io/autowarefoundation/autoware-universe:latest-cuda**
+```
+git clone https://github.com/autowarefoundation/autoware.git
+cd autoware
+```
+#### Environment Setup (first time)
+```
+cd autoware
+./setup-dev-env.sh -y docker
+```
+#### Login Docker
+```
+docker run -it [imageID] /bin/bash
+```
+#### Docker prepare
+```
+cd ~
+sudo apt-get -y update
+sudo apt-get -y install git
+sudo apt-get install unzip
+git clone https://github.com/autowarefoundation/autoware.git
+gdown -O ~/autoware_map/ 'https://docs.google.com/uc?export=download&id=1499_nsbUbIeturZaDj7jhUownh5fvXHd'
+unzip -d ~/autoware_map ~/autoware_map/sample-map-planning.zip
+```
+#### Workspace setup
+```
+cd autoware
+mkdir src
+vcs import src < autoware.repos
+sudo apt update
+rosdep update
+rosdep install -y --from-paths src --ignore-src --rosdistro $ROS_DISTRO
+colcon build --symlink-install -cmake-args -DCMAKE_BUILD_TYPE=Release
 ```
