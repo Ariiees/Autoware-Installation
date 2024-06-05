@@ -119,7 +119,7 @@ docker images
 ```
 Put this imageID into the following command:
 ```
-docker run -it  -v $HOME/autoware_data:$HOME/autoware_data  -e DISPLAY -e TERM   -e QT_X11_NO_MITSHM=1   -e XAUTHORITY=/tmp/.docker5guv3arw.xauth -v /tmp/.docker5guv3arw.xauth:/tmp/.docker5guv3arw.xauth   -v /tmp/.X11-unix:/tmp/.X11-unix   -v /etc/localtime:/etc/localtime:to [imageID] /bin/bash
+docker run -it  -v $HOME/autoware_data:$HOME/autoware_data  -e DISPLAY -e TERM   -e QT_X11_NO_MITSHM=1   -e XAUTHORITY=/tmp/.docker5guv3arw.xauth -v /tmp/.docker5guv3arw.xauth:/tmp/.docker5guv3arw.xauth   -v /tmp/.X11-unix:/tmp/.X11-unix   -v /etc/localtime:/etc/localtime:ro [imageID] /bin/bash
 ```
 Inside the docker, test tutorial
 ```
