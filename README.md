@@ -84,8 +84,9 @@ cd autoware
 ```
 #### Login Docker
 ```
-docker run -it [imageID] /bin/bash
+rocker --nvidia --x11 --user --volume $HOME/autoware_data -- ghcr.io/autowarefoundation/autoware-universe:latest-cuda
 ```
+This will mount your local folder $~/autoware_data$ to your container and connect your local x11 rviz visualization to this container.
 #### Docker prepare
 ```
 cd ~
