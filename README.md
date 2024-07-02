@@ -1,6 +1,8 @@
 # Autoware Install
 Ubuntu 22.04
+
 ROS2 humble
+
 nvidia-smi: Driver Version: 555.42.02 CUDA Version: 12.5
 
 ## Prepare
